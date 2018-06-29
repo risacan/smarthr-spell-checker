@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>smάɚt éɪtʃ άɚ Spell Checker</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="risacan" content="SmartHR Spell Checker">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <link rel="shortcut icon" href="">
+</head>
+
+<body>
+  <input id="answer" type="text" />
+  <span id="emoji">😀</span>
+  <script>
+    var answerObj = document.getElementById("answer");
+    var emoji = document.getElementById("emoji");
+    function spellCheck() {
+      var answer = answerObj.value
+      var result = /^SmartHR$/.test(answer)
+      if (result === true) {
+        emoji.textContent = "🎉"
+      } else {
+        emoji.textContent = "🤔"
+      }
+    }
+    answerObj.addEventListener("input", spellCheck);
+  </script>
+</body>
+
+</html>
