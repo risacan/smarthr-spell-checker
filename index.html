@@ -18,7 +18,7 @@
   <script>
     var answerObj = document.getElementById("answer");
     var emoji = document.getElementById("emoji");
-    function spellCheck() {
+    function checkSpell() {
       var answer = answerObj.value
       var result = /^SmartHR$/.test(answer)
       if (result === true) {
@@ -27,7 +27,7 @@
         emoji.textContent = "🤔"
       }
     }
-    answerObj.addEventListener("input", spellCheck);
+    answerObj.addEventListener("input", checkSpell);
   </script>
 </body>
 
