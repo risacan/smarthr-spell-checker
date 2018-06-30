@@ -8,18 +8,26 @@
   <meta name="description" content="">
   <meta name="risacan" content="SmartHR Spell Checker">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
   <link rel="shortcut icon" href="">
 </head>
 
 <body>
-  <input id="answer" type="text" />
-  <span id="emoji">😀</span>
+  <div>
+    <div class="emoji" id="emoji">TYPE 👇</div>
+    <input id="answer" type="text" />
+
+  </div>
   <script>
     var answerObj = document.getElementById("answer");
     var emoji = document.getElementById("emoji");
     function checkSpell() {
       var answer = answerObj.value
+      if (answer == "") {
+        emoji.textContent = "TYPE 👇"
+        return
+      }
       var result = /^SmartHR$/.test(answer)
       if (result === true) {
         emoji.textContent = "🎉"
@@ -28,6 +36,10 @@
       }
     }
     answerObj.addEventListener("input", checkSpell);
+
+    window.onload = function () {
+      answerObj.focus()
+    }
   </script>
 </body>
 
