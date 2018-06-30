@@ -1,4 +1,4 @@
-// confetti.js
+// https://codepen.io/iprodev/pen/azpWBr
 var retina = window.devicePixelRatio,
   // Math shorthands
   PI = Math.PI,
