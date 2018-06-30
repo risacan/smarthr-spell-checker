@@ -1,4 +1,5 @@
 body {
+  background: #0cd7e1;
   background: linear-gradient(#0cd7e1, #0040ffe1) fixed;
 }
 
@@ -22,4 +23,19 @@ input {
   color: #fff;
   font-weight: 400;
   width: 300px;
+}
+
+/* confetti */
+
+#confetti {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+  /* visibility: hidden; */
 }

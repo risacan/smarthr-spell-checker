@@ -14,14 +14,15 @@
 </head>
 
 <body>
+  <canvas id="confetti" width="1" height="1" class="hide"></canvas>
   <div>
     <div class="emoji" id="emoji">TYPE 👇</div>
     <input id="answer" type="text" />
-
   </div>
   <script>
     var answerObj = document.getElementById("answer");
     var emoji = document.getElementById("emoji");
+    var canvas = document.getElementById("confetti");
     function checkSpell() {
       var answer = answerObj.value
       if (answer == "") {
@@ -31,8 +32,10 @@
       var result = /^SmartHR$/.test(answer)
       if (result === true) {
         emoji.textContent = "🎉"
+        canvas.classList.remove("hide")
       } else {
         emoji.textContent = "🤔"
+        canvas.classList.add("hide")
       }
     }
     answerObj.addEventListener("input", checkSpell);
@@ -41,6 +44,7 @@
       answerObj.focus()
     }
   </script>
+  <script type="text/javascript" src="./index.js"></script>
 </body>
 
 </html>
