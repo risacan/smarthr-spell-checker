@@ -485,5 +485,4 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("resize", function(event) {
     confetti.resize();
   });
-  console.log("importing index.js🌟");
 });
