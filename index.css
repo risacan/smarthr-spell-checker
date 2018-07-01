@@ -25,6 +25,16 @@ input {
   width: 300px;
 }
 
+footer {
+  font-size: 0.5em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /* confetti */
 
 #confetti {

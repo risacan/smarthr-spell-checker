@@ -29,10 +29,14 @@
     <div class="emoji" id="emoji">TYPE 👇</div>
     <input id="answer" type="text" />
   </div>
+  <footer class="hide" id="credit">Amazing Confetti Effect by
+    <a href="https://codepen.io/iprodev/pen/azpWBr">https://codepen.io/iprodev/pen/azpWBr</a>
+  </footer>
   <script>
     var answerObj = document.getElementById("answer");
     var emoji = document.getElementById("emoji");
     var canvas = document.getElementById("confetti");
+    var link = document.getElementById("credit");
     function checkSpell() {
       var answer = answerObj.value
       if (answer == "") {
@@ -43,9 +47,11 @@
       if (result === true) {
         emoji.textContent = "🎉"
         canvas.classList.remove("hide")
+        credit.classList.remove("hide")
       } else {
         emoji.textContent = "🤔"
         canvas.classList.add("hide")
+        credit.classList.add("hide")
       }
     }
     answerObj.addEventListener("input", checkSpell);
@@ -55,6 +61,7 @@
     }
   </script>
   <script type="text/javascript" src="./index.js"></script>
+
 </body>
 
 </html>
