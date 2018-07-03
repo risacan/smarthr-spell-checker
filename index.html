@@ -42,27 +42,28 @@
     var link = document.getElementById("credit");
     function checkSpell() {
       var answer = answerObj.value
-      if (answer == "") {
-        emoji.textContent = "TYPE 👇"
-        return
-      }
-      if (answer == "smartHR") {
-        emoji.textContent = "😡"
-        return
-      }
-      var result = /^SmartHR$/.test(answer)
-      if (result === true) {
-        emoji.textContent = "🎉"
-        canvas.classList.remove("hide")
-        credit.classList.remove("hide")
-      } else {
-        emoji.textContent = "🤔"
-        canvas.classList.add("hide")
-        credit.classList.add("hide")
+      switch (answer) {
+        case "":
+          emoji.textContent = "TYPE 👇"
+          break;
+        case "smartHR":
+        case "SMARTHR":
+        case "Smart HR":
+          emoji.textContent = "😡"
+          break;
+        case "SmartHR":
+          emoji.textContent = "🎉"
+          canvas.classList.remove("hide")
+          credit.classList.remove("hide")
+          break;
+        default:
+          emoji.textContent = "🤔"
+          canvas.classList.add("hide")
+          credit.classList.add("hide")
+          break;
       }
     }
     answerObj.addEventListener("input", checkSpell);
-
     window.onload = function () {
       answerObj.focus()
     }
