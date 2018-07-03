@@ -46,6 +46,10 @@
         emoji.textContent = "TYPE 👇"
         return
       }
+      if (answer == "smartHR") {
+        emoji.textContent = "😡"
+        return
+      }
       var result = /^SmartHR$/.test(answer)
       if (result === true) {
         emoji.textContent = "🎉"
